@@ -481,13 +481,16 @@
       dataType: "html",
       success: function (data, status) {
         var rooms = csvJSON(data);
-        console.log(rooms);
-      },
-      error: function (xqhr, error, exception) {
-        alert("error");
+        console.log(Object.entries(rooms));
+        var json = properJSON(rooms);
+        console.log(json);
       }
     });
   });
+
+  function properJSON(json) {
+    
+  }
 
   function csvJSON(csv){
 
